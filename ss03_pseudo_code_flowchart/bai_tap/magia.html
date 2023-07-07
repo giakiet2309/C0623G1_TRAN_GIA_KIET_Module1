@@ -9,16 +9,15 @@
 
 <body>
     <script>
-        let a 
-do {
-     a = +prompt("Nhập vào số tuổi ");
-       
-            if (a < 51) {
-                alert("Chưa đủ tuổi");
-            } else {
-                alert("đã đủ tuổi");
-            }
-        }while (a<51);
+        let mon = +prompt("Nhập vào số tháng");
+        if (mon == 1 || mon == 3 || mon == 5 || mon == 7 || mon == 8 || mon == 10 || mon == 12) {
+            alert("co 31 ngay");
+        } else if (mon == 2) {
+            alert("co 29 ngay");
+        }
+        else {
+            alert("co 30 ngay");
+        }
 
     </script>
 </body>
