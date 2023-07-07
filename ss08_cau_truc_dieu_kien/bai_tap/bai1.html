@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<body>
+    <script>
+        let a = +prompt('Nhâp vào cạnh a');
+        let b = +prompt('Nhâp vào cạnh b');
+        let c = +prompt('Nhâp vào cạnh c');
+
+        if (a * a == b * b + c * c || b * b == a * a + c * c || c * c == a * a + b * b) {
+            document.writeln("Đây là tam giác vuông cân");
+        } else {
+            document.writeln("Đây không phải tam giác vuông cân");
+        }
+    </script>
+</body>
+
+</html>

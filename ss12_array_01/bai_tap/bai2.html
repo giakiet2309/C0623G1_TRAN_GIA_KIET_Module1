@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        debugger
+        let n = +prompt("Nhập độ dài mảng : ");
+        let arr = [];
+        let arr1 = [];
+        let sum = 0;
+        for (let i = 0; i <= n; i++) {
+            arr[i] = +prompt("Nhập vào phần tử mảng tại phần tử thứ " + i);
+        }
+        document.write("Mảng bạn nhập vào là : " + "[" + arr + "]" + "</br>");
+
+        for (let i = 1; i <= arr.length; ++i) {
+        sum = i * i
+        if (sum == arr[i-1]) {
+            arr1.push(arr[i-1]);
+        } else if (sum == arr[i]){
+            arr1.push(arr[i]);
+        }
+    }
+     document.write('các số chính phương là ' + arr1);
+    </script>
+</body>
+</html>

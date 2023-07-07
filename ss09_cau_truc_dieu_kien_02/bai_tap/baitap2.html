@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>LƯƠNG THƯỞNG</title>
+</head>
+<body>
+<script>
+    let money = +prompt('Nhập vào lương');
+    let time = +prompt('Nhập vào giờ làm việc');
+    if (time >= 200) {
+        alert('Thưởng ' + money * 0.2);
+    } else if (time >= 100 && time < 200) {
+        alert('Thưởng ' + money * 0.1);
+    } else {
+        alert('Không có thưởng');
+    }
+</script>
+</body>
+</html>

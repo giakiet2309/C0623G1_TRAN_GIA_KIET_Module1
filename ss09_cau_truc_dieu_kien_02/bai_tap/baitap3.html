@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Vắng nghỉ</title>
+</head>
+
+<body>
+    <script>
+        let onWork = +prompt('Tổng số buổi module');
+        let offWork = +prompt('Tổng số buổi vắng');
+        let result = (offWork / onWork) * 100;
+        debugger
+        if (result > 10 && result < 20) {
+            alert("Mail warning");
+        } else if (result >= 20) {
+            alert("Chuyển lớp b ơi");
+        }
+    </script>
+</body>
+
+</html>

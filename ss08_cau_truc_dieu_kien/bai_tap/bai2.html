@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<body>
+    <script>
+        let thang = +prompt('nhập vào số tháng');
+        let nam = +prompt('nhập vào số năm');
+        switch (thang) {
+            case 1:
+            case 3:
+            case 5:
+            case 7:
+            case 8:
+            case 10:
+            case 12:
+                alert('Tháng ' + thang + ' năm ' + nam + ' có 31 ngày');
+                break;
+            case 4:
+            case 6:
+            case 9:
+            case 11:
+                alert('Tháng ' + thang + ' năm ' + nam + ' có 30 ngày');
+                break;
+            case 2:
+                if (nam !== 0) {
+                    if (nam % 4 === 0) {
+                        alert('Tháng ' + thang + ' năm ' + nam + ' có 29 ngày' + " , đây là năm nhuận");
+                    } else {
+                        alert('Tháng ' + thang + ' năm ' + nam + ' có 28 ngày');
+                    }
+                }
+                default :
+                    alert("Tháng gì đây ????")
+        }
+    </script>
+</body>
+
+</html>

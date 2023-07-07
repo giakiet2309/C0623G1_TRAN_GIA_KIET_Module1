@@ -1,11 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Title</title>
 </head>
+
 <body>
-    
+    <h1 style="text-align: center;">TIP CALCULATOR</h1>
+    <p>How much was your bill?</p>
+    <p>$<input type="number" pl id="money"></p>
+    <p>How was your service ?</p>
+    <select style="width: 200px; height: 40px;text-align: center;" id="%">
+        <option value="30">30% - Outstanding</option>
+        <option value="20">20% - Good</option>
+        <option value="15">15% - It was OK</option>
+        <option value="10">10% - BAD</option>
+        <option value="5">5% - Terrible</option>
+    </select>
+    <p>How many people are sharing the bill?</p>
+    <input type="number" style="width: 200px" id="people"> people
+    </br></br>
+    <button
+        style="background-color: rgba(250, 42, 42, 0.808); width: 200px; height: 40px; border-radius: 6px ; color: white;"
+        onclick="moneyTip()">CALCULATE!
+    </button>
+    </br></br>
+    <b>
+        <p>TIP AMOUNT</p>
+    </b>
+    <div id="moneytip"></div>
+    <b>
+        <p>each</p>
+    </b>
+    <script>
+        function moneyTip() {
+            let num1 = document.getElementById("money").value;
+            let num2 = document.getElementById("people").value;
+            let num3 = document.getElementById("%").value;
+            let total = (num1 / num2) * (num3 / 100);
+            document.getElementById("moneytip").innerHTML = total + "$";
+        }
+    </script>
 </body>
+
 </html>

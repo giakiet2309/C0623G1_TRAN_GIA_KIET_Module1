@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bai 2</title>
+</head>
+
+<body>
+    <script>
+        let son;
+        let dad;
+        let nam = 0
+        do {
+            debugger
+            son = +prompt("Nhập vào tuổi con");
+            dad = +prompt("Nhập vào tuổi cha");
+            if (son > (dad - 25)) {
+                alert("Tuổi cha phải lớn hơn tuổi con ít nhất là 25 tuổi");
+            } else
+                break;
+        } while (son > (dad - 25))
+        debugger
+        while (dad > son * 2) {
+            dad = dad + 1;
+            son = son + 1;
+            nam = nam + 1;
+        }
+        alert("Tuổi cha gấp đôi tuổi con sau " + nam + " năm");
+    </script>
+</body>
+
+</html>

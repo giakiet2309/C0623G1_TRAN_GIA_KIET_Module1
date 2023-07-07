@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>BAI 2</title>
+</head>
+
+<body>
+    <script>
+        let n;
+        
+        do {
+            n = +prompt("Nhập vào một số nguyên");
+            if (n < 0 || n > 100 || isNaN(n)) {
+                alert('Yêu cầu nhập lại');
+            }
+        } while (n < 0 || n > 100 || isNaN(n));
+        document.write(n + ' là một số nguyên');
+    </script>
+</body>
+
+</html>

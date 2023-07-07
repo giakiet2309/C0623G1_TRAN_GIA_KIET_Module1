@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>quy doi</title>
+</head>
+
+<body>
+    <h2>Đổi tiền Việt qua các loại tiền tệ</h2>
+    <input type="number" id="arr1" placeholder="VND">
+    <select id="arr2">
+        <option value="USD">USD (đô la)</option>
+        <option value="JPY">JPY (yên)</option>
+        <option value="VND">VND (vnd)</option>
+        <option value="tientrung">RMB (tệ)</option>
+        <option value="tienanh">GBP (pound - bảng anh)</option>
+    </select>
+    <button onclick="checkMoney()">Quy Đổi</button></br>
+    <div id="result"></div>
+    <script>
+        function checkMoney() {
+            let tien = document.getElementById("arr1").value;
+            let tien1 = document.getElementById("arr2").value;
+            if (tien1 === "USD") {
+                document.getElementById("result").innerHTML = tien / 23000 + ' USD';
+            }
+            if (tien1 === "JPY") {
+                document.getElementById("result").innerHTML = tien / 16865 + 'JPY';
+            }
+            if (tien1 === "RMB") {
+                document.getElementById("result").innerHTML = tien / 3551 + ' RMB';
+            }
+            if (tien1 === "GBP") {
+                document.getElementById("result").innerHTML = tien / 30 + ' GBP';
+            }
+            if (tien1 === "VND") {
+                document.getElementById("result").innerHTML = tien+ ' VND';
+            }
+        }
+    </script>
+</body>
+
+</html>
