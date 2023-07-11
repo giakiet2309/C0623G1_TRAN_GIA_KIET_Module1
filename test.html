@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let n = +prompt("Nhập độ dài mảng : ");
+        let arr = [];
+        for (let i = 0; i <= n; i++) {
+            arr[i] = +prompt("Nhập vào phần tử mảng tại phần tử thứ " + i);
+        }
+        function numbers(array) {
+            debugger
+            if (array[0] % 2 === 0) {
+                for (let i = 1; i < array.length; i++) {
+                    if (array[i] % 2 !== 0) {
+                        return -1;
+                    }
+                }
+                return 1;
+            } else {
+                for (let i = 1; i < array.length; i++) {
+                    if (array[i] % 2 === 0) {
+                        return -1;
+                    }
+                }
+                return 0;
+            }
+        }
+        document.write("Mảng bạn vừa nhập là : " + "[" + arr + "]" + "</br>");
+        document.write('output ' + numbers(arr));
+    </script>
+</body>
+
+</html>

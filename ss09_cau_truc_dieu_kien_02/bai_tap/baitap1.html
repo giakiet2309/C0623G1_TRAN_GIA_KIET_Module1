@@ -13,8 +13,8 @@
         <option value="USD">USD (đô la)</option>
         <option value="JPY">JPY (yên)</option>
         <option value="VND">VND (vnd)</option>
-        <option value="tientrung">RMB (tệ)</option>
-        <option value="tienanh">GBP (pound - bảng anh)</option>
+        <option value="RMB">RMB (tệ)</option>
+        <option value="GBP">GBP (pound - bảng anh)</option>
     </select>
     <button onclick="checkMoney()">Quy Đổi</button></br>
     <div id="result"></div>
@@ -32,7 +32,7 @@
                 document.getElementById("result").innerHTML = tien / 3551 + ' RMB';
             }
             if (tien1 === "GBP") {
-                document.getElementById("result").innerHTML = tien / 30 + ' GBP';
+                document.getElementById("result").innerHTML = tien / 30000 + ' GBP';
             }
             if (tien1 === "VND") {
                 document.getElementById("result").innerHTML = tien+ ' VND';
