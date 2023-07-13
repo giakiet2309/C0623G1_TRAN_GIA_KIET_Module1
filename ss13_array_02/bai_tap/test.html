@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //    BAI MOT
+        // let n = +prompt("Nhập độ dài mảng : ");
+        // let arr = [];
+        // let arr1 = [];
+        // let sum = 0;
+        // for (let i = 0; i <= n; i++) {
+        //     arr[i] = +prompt("Nhập vào phần tử thứ " + i + " của mảng");
+        // } document.write("Mảng bạn vừa nhập là " + "[" + arr + "]" + "<br/>");
+
+        // for (let i = 1; i < arr.length; i += 2) {
+        //     if (arr[i] % 2 === 0){
+        //         arr1.push(arr[i]);
+        //         sum += arr[i]
+        //     }
+        // }
+        // document.write("Tổng các phần tử chẵn ở vị trí lẻ là " + sum);
+        //    BAI HAI
+        // let m = +prompt('Nhập vào m');
+        // let n = +prompt('Nhập vào n');
+        // let arr = [];
+        // let sum = 0;
+        // for (let i = 0; i < m; i++) {
+        //     arr[i] = [];
+        //     for (let j = 0; j < n; j++) {
+        //         arr[i][j] = +prompt(`Nhập phần tử [${i}][${j}]`);
+        //     }
+        // }
+        // console.log(arr);
+
+        // for (let i = 0; i < arr.length; i++) {
+        //     sum += arr[i][i] 
+        //     sum += arr[i][(arr.length-1)-i]
+        // }
+        // document.write("tong duong cheo" + sum);
+        // BAI BA
+
+        let n = +prompt("Nhập độ dài mảng : ");
+        let array1 = [];
+        let array2 = [];
+        for (let i = 0; i <= n; i++) {
+            array1[i] = +prompt("Nhập vào phần tử mảng tại phần tử thứ " + i);
+        }
+        document.write("Mảng bạn nhập vào là : " + "[" + array1 + "]" + "</br>");
+        debugger
+
+        for (let i = 0; i < array1.length; i++) {
+            if (array2.indexOf(array1[i]) === -1) {
+                array2.push(array1[i]);
+            }
+
+        }
+        for (let i = 0; i < array1.length; i++) {
+            if (array2[i] !== array1[i]) {
+                alert('Yêu cầu nhập lại');
+                document.write("Bị trùng ")
+                break;
+            }
+        }
+    </script>
+</body>
+
+</html>
