@@ -11,11 +11,10 @@
     <script>
         let n = +prompt("Nhập độ dài mảng : ");
         let arr = [];
-        for (let i = 0; i <= n; i++) {
+        for (let i = 0; i < n; i++) {
             arr[i] = +prompt("Nhập vào phần tử mảng tại phần tử thứ " + i);
         }
         function numbers(arr) {
-            debugger
             if (arr[0] % 2 === 0) {
                 for (let i = 1; i < arr.length; i++) {
                     if (arr[i] % 2 !== 0) {
