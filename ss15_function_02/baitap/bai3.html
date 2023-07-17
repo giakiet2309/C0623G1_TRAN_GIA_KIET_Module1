@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai3</title>
+</head>
+<body>
+<script>
+    let n = +prompt('Nhập vào số để kiểm tra');
+    
+
+    function findMaxNumber(n) {
+        debugger
+        let string = n.toString();
+        let arr = string.split('');
+        if (n >= 1000 && n < 10000) {
+            for (let i = 0; i < arr.length; i++) {
+                if (arr[i] <= arr[i + 1]) {
+                    arr.splice(i, 1);
+                    break;
+                }
+            } 
+        } else {
+            return -1;
+        }
+        return arr.join('');
+    }
+    alert(findMaxNumber(n));
+</script>
+</body>
+</html>
