@@ -46,6 +46,18 @@
             toString() {
                 return "account: " + this.number + "name account: " + this.name + "so du: " + this.money;
             }
+
+            deposit(money) {
+                this.money += money;
+            }
+
+            withdraw(money) {
+                if (this.money >= money) {
+                    this.money -= money;
+                } else {
+                    alert("Ko đủ số dư ");
+                }
+            }
         }
 
         let account1 = new Account('046', 'Tran Gia A', 100000);
@@ -81,7 +93,7 @@
             let money = +prompt('Nhập số tiền cần nạp');
             for (let i = 0; i < accountList.length; i++) {
                 if (id === accountList[i].number) {
-                    accountList[i].money +=  money;
+                    accountList[i].money += money;
                     alert("Nạp xiền thành công");
                     break;
                 } else {
