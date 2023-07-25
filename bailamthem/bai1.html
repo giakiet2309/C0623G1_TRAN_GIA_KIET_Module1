@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Lấy chiều dài của mảng từ người dùng
+        let n = +prompt("độ dài của mảng ");
+
+        // Tạo một mảng mới
+        let arr = [];
+
+        // Lặp qua mảng và yêu cầu người dùng nhập từng phần tử
+        for (let i = 0; i < n; i++) {
+            arr[i] = +prompt("Nhập phần tử thứ " + i);
+        }
+
+        // Hiển thị mảng vừa nhập
+        document.write("Mảng vừa nhập là " + "[" + arr + "]" + '</br>');
+        debugger
+
+        // Tạo một từ điển để theo dõi tần số xuất hiện của từng số nguyên trong mảng
+        let frequencies = {};
+
+        // Lặp qua mảng và tăng tần số xuất hiện của từng số nguyên
+        for (let number of arr) {
+            if (frequencies[number]) {
+                frequencies[number]++;
+            } else {
+                frequencies[number] = 1;
+            }
+        }
+
+        // Tạo một biến để theo dõi xem tất cả các tần số có bằng nhau hay không
+        let isEqualFrequency = true;
+
+        // Lặp qua từ điển và kiểm tra xem tất cả các tần số đều bằng nhau hay không
+        for (let number in frequencies) {
+            if (frequencies[number] !== frequencies[Object.keys(frequencies)[0]]) {
+                isEqualFrequency = false;
+                break;
+            }
+        }
+
+        // Hiển thị kết quả
+        if (isEqualFrequency) {
+            document.write("true");
+        } else {
+            document.write("false");
+        }
+
+
+    </script>
+</body>
+
+</html>

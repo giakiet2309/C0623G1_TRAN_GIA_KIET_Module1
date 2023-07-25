@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const vowels = ["a", "e", "i", "o", "u", "A", "E", "I", "O", "U"];
+
+        const character = prompt("Nhập một ký tự: ");
+
+        switch (character) {
+            case "a":
+            case "e":
+            case "i":
+            case "o":
+            case "u":
+            case "A":
+            case "E":
+            case "I":
+            case "O":
+            case "U":
+                document.write(character, " là nguyên âm.");
+                break;
+            default:
+                if (character.match(/[a-zA-Z]/)) {
+                    document.write(character + " là phụ âm.");
+                } else {
+                    document.write(character + " là ký tự không hợp lệ.");
+                }
+        }
+    </script>
+</body>
+
+</html>

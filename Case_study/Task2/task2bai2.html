@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tam giác 2</title>
+</head>
+
+<body>
+    <script>
+        let h = +prompt("Nhập chiều cao của tam giác")
+        for (let row = 1; row <= h; row++) {
+
+            for (let column = 1; column <= h - row; column++) {
+                document.write("&nbsp&nbsp");
+            }
+
+            for (let column = 1; column <= 2 * row - 1; column++) {
+                document.write("*");
+            }
+            document.write("</br>");
+        }
+    </script>
+</body>
+
+</html>
